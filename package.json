@@ -1,0 +1,15 @@
+{
+  "name": "a03-harivig",
+  "version": "1.0.0",
+  "description": "assignment 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "harivig"
+  },
+  "author": "harivig",
+  "license": "SEE LICENSE IN LICENSE"
+}
