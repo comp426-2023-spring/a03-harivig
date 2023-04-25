@@ -1,6 +1,6 @@
 # Assignment 03: Create a module-based command line Node.js package (with CLI)
 
-This assignment will help you learn to create an installable Node.js module package. You'll also provide a command line interface with it. 
+This assignment will help you learn to create an installable Node.js module package. You'll also provide a command line interface with it.
 
 ## DO NOT CLONE THIS REPOSITORY DIRECTLY FROM THE TEMPLATE REPO
 
@@ -12,7 +12,7 @@ Use the personalized repository that is generated when you follow the GitHub cla
 
 The purpose of this assignment is to create an installable Node.js module package.
 
-The package you create will contain a module (or multiple modules) as well as configuration and scripts to allow the user to run `node-rps` and `node-rpsls` after instaling. 
+The package you create will contain a module (or multiple modules) as well as configuration and scripts to allow the user to run `node-rps` and `node-rpsls` after instaling.
 
 The package will contain command line games of "[Rock Paper Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors)" (`node-rps`) and the more advanced version, "[Rock Paper Scissors Lizard Spock](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)"  (`node-rpsls`).
 We will refer to the games hereafter as RPS and RPSLS, respectively.
@@ -23,17 +23,17 @@ See below for rules under example messages output.
 
 ## Setup
 
-1. After you've cloned your repository, run `npm init` and follow it through, adding and changing information as needed. 
-2. Set package name to `node-rpsls`. 
-2. Set the `main` file to be `./lib/rpsls.js`
-3. Set the license to match the license in the repository.
-4. Once your `package.json` file is created, set two `bin` files as `"node-rps": "./bin/rps-cli.js"` and `"node-rpsls": "rpsls-cli.js"`.
-5. Install dependencies. You'll need minimist for this assignment to parse command line arguments.
-6. Create directories `bin` and `lib` inside the root of the directory.
-7. Create `rpsls.js` inside the `lib` directory. This is going to be the main file and also where you will put your exported RPS and RPSLS function(s). 
-8. Create `rps-cli.js` and `rpsls-cli.js` inside the `bin` directory. These are going to be the files that run when you link/install the package and run `node-rps` and `node-rpsls`, respectively.
-9. Put the appropriate shebang in the `./bin/*-cli.js` files. 
-10. Make sure that the `./bin/*-cli.js` files are executable (i.e. run `chmod +x ./bin/*-cli.js`). 
+1. After you've cloned your repository, run `npm init` and follow it through, adding and changing information as needed.
+2. Set package name to `node-rpsls`.
+3. Set the `main` file to be `./lib/rpsls.js`
+4. Set the license to match the license in the repository.
+5. Once your `package.json` file is created, set two `bin` files as `"node-rps": "./bin/rps-cli.js"` and `"node-rpsls": "rpsls-cli.js"`.
+6. Install dependencies. You'll need minimist for this assignment to parse command line arguments.
+7. Create directories `bin` and `lib` inside the root of the directory.
+8. Create `rpsls.js` inside the `lib` directory. This is going to be the main file and also where you will put your exported RPS and RPSLS function(s).
+9. Create `rps-cli.js` and `rpsls-cli.js` inside the `bin` directory. These are going to be the files that run when you link/install the package and run `node-rps` and `node-rpsls`, respectively.
+10. Put the appropriate shebang in the `./bin/*-cli.js` files.
+11. Make sure that the `./bin/*-cli.js` files are executable (i.e. run `chmod +x ./bin/*-cli.js`).
 
 ## Requirements
 
@@ -47,13 +47,13 @@ Operational requirements
 1. Two versions of the game (RPS and RPSLS) in one package.
 2. If the command or function is called without an argument, it should return only the shot for one player, e.g. `{"player":"rock"}`.
 3. If the command or function is called with an argument, it should return the results of a game between a player and an opponent, e.g. `{"player":"rock","opponent":"scissors","result":"lose"}`.
-4. If you supply any argument other than those the individual function is expecting, the user should be presented with an error and a suggestion of the available options (e.g. "rock", "paper", "scissors" for RPS and "rock", "paper", "scissors", "lizard", "spock" for RPSLS). 
+4. If you supply any argument other than those the individual function is expecting, the user should be presented with an error and a suggestion of the available options (e.g. "rock", "paper", "scissors" for RPS and "rock", "paper", "scissors", "lizard", "spock" for RPSLS).
 5. Each command should echo its own help text with usage examples when invoked with `-h` or `--help` (see below).
 6. Each command should exho rules when invoked with `-r` `--rules` (see below).
 7. If an out-of-range argument is supplied to your functions, the function should return an error on `console.error()` indicating that `[ARGUMENT] is out of range.`
 
 > The reason that we want the function(s) to do the work and not our CLI scripts is that we want to be able to import from this package for future assignments.
-> In order to not have to reengineer this later, it's best to create functions that return what we need as data objects and then use `JSON.stringify()` in the CLI wrapper to output JSON for the command line. 
+> In order to not have to reengineer this later, it's best to create functions that return what we need as data objects and then use `JSON.stringify()` in the CLI wrapper to output JSON for the command line.
 > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 ### Importable module
@@ -92,7 +92,7 @@ But that same function should not return `lizard` or `spock` because those are o
 
 An importable `rpsls()` function, on the other hand, would return any of the elements in this array: `[ 'rock','paper','scissors','lizard','spock']`
 
-You must also structure your functions so that if an argument is supplied, then the function would return the result of a game between the user/player and an opponent. Like this: 
+You must also structure your functions so that if an argument is supplied, then the function would return the result of a game between the user/player and an opponent. Like this:
 
 ```
 let shot = Spock'
@@ -107,8 +107,8 @@ rpsls(shot)
   result: win'
 }
 ```
+
 > **_IMPORTANT:_** Your functions must be case agnostic, i.e. they have to be able to take arguments that have capital letters or lowercase.
-> 
 
 ### CLI
 
@@ -203,7 +203,7 @@ Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 
 #### Example playable online games
 
-https://rpsls.net/ - This one lets you play an opponent at a unique URL or a random opponent. 
+https://rpsls.net/ - This one lets you play an opponent at a unique URL or a random opponent.
 
 #### Example how-to-build guides
 

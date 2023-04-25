@@ -1,8 +1,8 @@
 {
-  "name": "a03-harivig",
+  "name": "node-rpsls",
   "version": "1.0.0",
   "description": "assignment 3",
-  "main": "index.js",
+  "main": "./lib/rpsls.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,13 @@
     "url": "harivig"
   },
   "author": "harivig",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "bin": {
+    "node-rps": "./bin/rps-cli.js",
+    "node-rpsls": "./bin/rpsls-cli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
 }
